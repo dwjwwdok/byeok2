@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碧然冥影</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="style/main.css">
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
+
+    
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    
+
+    <style>
+        :root {
+            --snow-color: white;
+        }
+  
+        .snow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+            width: 10px;
+            height: 10px;
+            /* background: var(--snow-color); */
+            border-radius: 50%;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+<body>
+        
+    </div>
+
+    <div id="wrap">
+
+        <section id="section_1">
+            <div id="b_L">
+                <div id="Lobj1" class="L_obj"><img src="BM_img/L_obj_1.png"> </div>
+                <div id="Lobj2" class="L_obj"><img src="BM_img/L_obj_2.png"> </div>
+                <div id="Lobj3" class="L_obj"><img src="BM_img/L_obj_3.png"> </div>
+                <div id="Lobj4" class="L_obj"><img src="BM_img/L_obj_4.png"> </div>
+            </div>
+            <div id="b_R">
+                <div id="Robj1" class="R_obj"><img src="BM_img/R_obj_1.png"></div>
+                <div id="Robj2" class="R_obj"><img src="BM_img/R_obj_2.png"></div>
+                <div id="Robj3" class="R_obj"><img src="BM_img/R_obj_3.png"></div>
+                <div id="Robj4" class="R_obj"><img src="BM_img/R_obj_4.png"></div>
+            </div>
+            <div id="counter_canva">
+                <div class="counter">
+                    <script>
+                        var now = new Date();
+                        var then = new Date("Oct 5,2023");
+                        var gap = now.getTime() - then.getTime();
+                        gap = Math.floor(gap / (1000 * 60 * 60 * 24));
+                        document.write("D + " + gap);
+                    </script>
+                </div>
+                <div class="name"><img src="BM_img/BM_name.png"></div>
+                <div id="moon" class="animate__rotateOut"><img src="BM_img/BM_M.png"></div>
+            </div>
+            <div id="se1_wrap">
+                <div id="B_left">
+                    <div id="B_bac"><img src="BM_img/B_bac.png"></div>
+                    <a href="#">
+                        <div id="B_img"><img src="BM_img/B_0.png"></div>
+                        <div id="B_box1"><img src="BM_img/Group 62.png"></div>
+                        <div id="B_box2"></div>
+                    </a>
+                    <!-- <div id="B_box2"></div> -->
+                </div>  
+                <div id="M_right">
+                    
+                    <a href="#">
+                        <div id="M_box2"></div>
+                        <div id="M_img"><img src="BM_img/M_0.png"></div>
+                        <div id="M_box1"><img src="BM_img/Group 60.png"></div>
+                    </a>
+                    <div id="M_bac"><img src="BM_img/M_bac.png"></div>
+                </div>  
+                <div id="H_wrap">
+                    <h1>madeby@hyun</h1>
+                    <h2>Resources:Freepik</h2>    
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var snowCount = 200; // 원하는 눈의 개수를 설정
+        
+            for (var i = 0; i < snowCount; i++) {
+                $('<div class="snow"></div>').appendTo('#wrap');
+            }
+        
+            function getRandomColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+        
+            var snowElements = document.getElementsByClassName('snow');
+            for (var i = 0; i < snowElements.length; i++) {
+                var snowElement = snowElements[i];
+                snowElement.style.setProperty('--snow-color', getRandomColor());
+            }
+        });
+    </script>
+    
+    <!-- <script>
+        let counter = document.querySelector('.counter');
+        let today = new Date(""), //현재 날짜 가져오기
+            dday = new Date("Oct 6,2023, 12:00:00").getTime(), //디데이
+            gap = today - dday,
+            result = Math.floor(gap / (1000 * 60 * 60 * 24));
+      
+        counter.innerHTML = `D+${result}`
+    </script> -->
+
+    <!-- <script class="counter">
+        var now = new Date();
+        var then = new Date("Oct 6,2023");
+        var gap = now.getTime() - then.getTime();
+        gap = Math.floor(gap / (1000 * 60 * 60 * 24));
+        document.write("D + " + gap);
+    </script> -->
+
+</body>
+</html>

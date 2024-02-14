@@ -1,0 +1,391 @@
+#wrap {
+    width: 100%;
+    max-height: 100vw;
+}
+
+#section_1 {
+    /* width: 1920px; */
+    height: 1022px;
+    background-image: url(/BM_img/bac_last.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 21px 26px;
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#se1_wrap {
+    display: flex;
+}
+
+#B_img {
+    position: absolute;
+    top: 103px;
+    left: 307px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#B_img:hover + #B_box1>img {
+    background-color: #3E70DD;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: all 0.3s linear;
+}
+
+#M_img {
+    position: absolute;
+    top: 103px;
+    right: 307px;
+    z-index: 10;
+}
+
+#b_L {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: movingL 3s 1 alternate forwards;
+}
+
+@keyframes movingL {
+    from {
+        margin-left: -500px;
+    }
+    to {
+        margin-left: 0px;
+    }
+}
+
+#b_R {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    animation: movingR 3s 1 alternate forwards;
+}
+
+@keyframes movingR {
+    from {
+        margin-right: -500px;
+    }
+    to {
+        margin-right: 0px;
+    }
+}
+
+#B_left {
+    width: 50%;
+    height: 100%;
+    /* background-color: aquamarine; */
+
+    display: flex;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    animation: leftB 1.5s 1 alternate forwards;
+}
+
+@keyframes leftB {
+    from {
+        margin-top: -500px;
+    }
+    to {
+        margin-top: 0px;
+    }
+}
+
+
+
+#M_right {
+    width: 50%;
+    height: 100%;
+    /* background-color: rgb(80, 99, 134); */
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    top: 0;
+    right: 0;
+
+    animation: rightM 1.5s 1 alternate forwards;
+}
+
+@keyframes rightM {
+    from {
+        margin-top: 500px;
+    }
+    to {
+        margin-top: 0px;
+    }
+}
+
+
+
+
+#B_box1 {
+    width: 370px;
+    height: 807px;
+    background-color: #B1B1B1;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    /* background-image: url(../BM_img/Group\ 62.png); */
+
+    position: absolute;
+    top: 109px;
+    left: 384px;
+}
+
+#B_box2 {
+    width: 370px;
+    height: 807px;
+    /* background-color: #B1B1B1; */
+    mix-blend-mode:multiply;
+    background: linear-gradient(to top, rgb(255, 255, 255), #b1b1b1);
+    clip-path: polygon(100% 60%, 100% 75%, 50% 100%, 0% 75%, 0% 0%);
+
+    position: absolute;
+    top: -520px;
+    left: 580px;
+}
+
+
+#M_box1 {
+    width: 370px;
+    height: 807px;
+    background-color: #B1B1B1;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    /* background-image: url(../BM_img/Group\ 60.png); */
+
+    position: absolute;
+    top: 109px;
+    right: 384px;
+
+}
+
+#M_box2 {
+    width: 370px;
+    height: 807px;
+    background-color: #B1B1B1;
+    mix-blend-mode:multiply;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), #b1b1b1);
+    clip-path: polygon(50% 5%, 100% 30%, 100% 75%, 0% 60%, 0 30%);
+
+    position: absolute;
+    bottom: -550px;
+    right: 580px;
+}
+
+#M_img:hover + #M_box1>img {
+    background-color: #255C43;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: all 0.3s linear;
+}
+
+h1, h2 {
+    position: absolute;
+    right: 26px;
+    bottom: 5px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #6d6d6d;
+}
+
+h1 {
+    position: absolute;
+    right: 120px;
+}
+
+h2 {
+    position: absolute;
+    right: 26px;
+}
+
+#Lobj2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    animation: Lobj2 1.5s alternate infinite;
+}
+
+@keyframes Lobj2 {
+    from {
+        margin-bottom: -10px;
+    }
+    to {
+        margin-top: 30px;
+    }
+}
+
+#Lobj3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    animation: Lobj3 1.5s alternate infinite;
+}
+
+/* @keyframes Lobj3 {
+    from {
+        margin-top: 30px;
+    }
+    to {
+        margin-bottom: 30px;
+    }
+} */
+
+#Lobj4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+
+    animation: Lobj4 2.5s alternate infinite;
+}
+
+@keyframes Lobj4 {
+    from {
+        margin-top: 0px;
+    }
+    to {
+        margin-top: 50px;
+    }
+}
+
+
+#Robj2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    animation: Robj2 1.5s alternate infinite;
+}
+
+@keyframes Robj2 {
+    from {
+        margin-bottom: -10px;
+    }
+    to {
+        margin-top: 30px;
+    }
+}
+
+#Robj3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+
+#Robj4 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    animation: Lobj4 2.5s alternate infinite;
+}
+
+@keyframes Lobj4 {
+    from {
+        margin-bottom: -10px;
+    }
+    to {
+        margin-top: 30px;
+    }
+}
+
+/* ===========================================/ */
+
+
+#canv {
+    width: 100%;
+    height: 1022px;
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#H_wrap {
+    display: flex;
+    justify-content: center;
+}
+
+#counter_canva {
+    width: 100%;
+    height: 1022px;
+    position: absolute;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 50px;
+    text-shadow: 0px 0px 10px #6d6d6d ;
+}
+
+.counter {
+    margin-right: 1.8%;
+}
+
+#moon {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: -300px;
+    z-index: 0;
+    background-color: #c0c0c0;
+    border-radius: 50%;
+
+    animation: moon_move 3.2s 1 alternate forwards;
+}
+
+#moon>img {
+    width: 100%;
+    mix-blend-mode: multiply;
+    opacity: 50%;
+    animation: rotate_moon 20s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes moon_move {
+    from {
+        margin-top: -200px;
+    }
+    to {
+        margin-top: -50px;
+    }
+}
+
+@keyframes rotate_moon {
+    to{
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+.counter {
+    position: relative;
+    z-index: 1;
+    top: -100px;
+    font-weight: 700;
+    font-family: "Bungee Hairline";
+}
+
+.name {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    mix-blend-mode: hard-light;
+}
+
